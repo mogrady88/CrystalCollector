@@ -1,8 +1,13 @@
 $(document).ready(function() {
 
-var userNumber = 0;
 var wins = 0;
 var losses = 0;
+var userNumber = 0;
+
+function crystalGame(){
+
+userNumber = 0;
+$("#userGuess").text(userNumber);
 
 var randomNumber = Math.floor(Math.random() * 102) + 19;
 var greenNumber = Math.floor(Math.random() * 12) + 1;
@@ -21,65 +26,73 @@ $("#compGuess").text(randomNumber);
 $("#greencrystal").click(function(){
     userNumber = userNumber + greenNumber;
     $("#userGuess").text(userNumber);
-    console.log(userNumber);
+    //console.log(userNumber);
 
     if (userNumber === randomNumber){
         alert("You've won!!");
         wins++;
         $("#wins").text(wins);
+        crystalGame();
     }
     else if (userNumber >= randomNumber){
         alert("You just lost");
         losses++;
         $("#losses").text(losses);
+        crystalGame();
     }
 })
 $("#bluecrystal").click(function(){
     userNumber = userNumber + blueNumber;
     $("#userGuess").text(userNumber);
-    console.log(userNumber);
+    //console.log(userNumber);
 
     if (userNumber === randomNumber){
         alert("You've won!!");
         wins++;
         $("#wins").text(wins);
+        crystalGame();
     }
     else if (userNumber >= randomNumber){
         alert("You just lost");
         losses++;
         $("#losses").text(losses);
+        crystalGame();
     }
 })
 $("#redcrystal").click(function(){
     userNumber = userNumber + redNumber;
     $("#userGuess").text(userNumber);
-    console.log(userNumber);
+    //console.log(userNumber);
 
     if (userNumber === randomNumber){
         alert("You've won!!");
         wins++;
         $("#wins").text(wins);
+        crystalGame();
     }
     else if (userNumber >= randomNumber){
         alert("You just lost");
         losses++;
         $("#losses").text(losses);
+        crystalGame();
     }
 })
 $("#whitecrystal").click(function(){
     userNumber = userNumber + whiteNumber;
     $("#userGuess").text(userNumber);
-    console.log(userNumber);
+    //console.log(userNumber);
 
     if (userNumber === randomNumber){
         alert("You've won!!");
         wins++;
         $("#wins").text(wins);
+        crystalGame();
     }
     else if (userNumber >= randomNumber){
         alert("You just lost");
         losses++;
         $("#losses").text(losses);
+        crystalGame();
     }
 })
 $("#reset").click(function(){
@@ -91,7 +104,10 @@ $("#reset").click(function(){
     $("#userGuess").text(userNumber);
     var randomNumber = Math.floor(Math.random() * 102) + 19;
     $("#compGuess").text(randomNumber);
+    alert("Game Reset: Good luck!");
 })
+}
+crystalGame();
 
 // if (userNumber === randomNumber){
 //     alert("You've won!!");
