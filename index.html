@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="page-header">
+    <h3 class="header-item">Wins: <span id="wins">0</span></h3>
+    <h3 class="header-item">Losses: <span id="losses">0</span></h3>
+    <button id="reset" class="btn btn-default" type="submit">New Game</button>
+    <h1>Crystal<small>Collector</small></h1>
+</div>
+<!-- container div -->
+<div class="container">
+<!-- row 1 with 2 divs for user number and answer number -->
+<div class="row">
+    <div class="col-lg-6">
+        <h1>User Number <span id = "userGuess">0</span></h1>
+    </div>
+    <div class = "col-lg-6">
+        <h1>Number to guess: <span id = "compGuess"></span></h1>
+    </div>
+</div>
+<!-- row 2 with 4 thumbnails of the crystals for user guess -->
+<div class="row crystals">
+        <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail" id ="bluecrystal">
+            <img src="images/bluecrystal.jpg" alt="Blue Crystal">
+        </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail" id ="greencrystal">
+            <img src="images/greencrystal.png" alt="Green Crystal">
+        </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail" id ="redcrystal">
+         <img src="images/redcrystal.png" alt="Red Crystal">
+        </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail" id ="whitecrystal">
+         <img src="images/whitecrystal.svg" alt="White Crystal">
+        </a>
+        </div>
+</div>
+</div>   
+</body>
+</html>
